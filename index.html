@@ -1,0 +1,455 @@
+<!doctype html>
+<!--
+   Sandeep Junnarkar
+Copyright (c) 2015 Sandeep Junnarkar
+-->
+<html lang="en">
+
+    <head>
+        <title>Form to email</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+        </script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!-- open container -->
+        <div class="container">
+            <section>
+                <h1>Mold in your apartment?</h1>
+                <p>Let NYCHA know by answering five quick questions.</p>
+                <p> We'll generate a letter you can email to NYCHA.</p>
+
+
+                <h4>Where do you live in New York City?</h4 id="whichBorough">
+<form name="myBorough">
+  <select name="borough" id="borough" onChange="select_borough()">
+  <option value="which">Select Borough</option>
+  <option value="theBronx">The Bronx</option>
+  <option value="brooklyn">Brooklyn</option>
+  <option value="manhattan">Manhattan</option>
+  <option value="queens">Queens</option>
+  <option value="statenIsland">Staten Island</option>
+</select>
+</form>
+  </br>
+  <div id="theBronx" class="hidden">
+
+<!--  <input type="text" size="40" id="default" list="theBronxHouses" placeholder="e.g. Clinton Houses">-->
+    <form name="myBronxHouse">
+<select name="bronxHouses" id="bronxHouses" data-placeholder="e.g. Clinton Houses" tabindex="1" onChange="select_house(); show_where();" >
+  <option value="Which NYCHA development?">Which NYCHA development?</option>
+<option value="1010 East 178 Street">1010 East 178 Street</option>
+<option value="1162-1176 Washington Avenue">1162-1176 Washington Avenue</option>
+<option value="1471 Watson Avenue">1471 Watson Avenue</option>
+<option value="Adams">Adams</option>
+<option value="Bailey Ave - W 193 St">Bailey Ave - W 193 St</option>
+<option value="Baychester">Baychester</option>
+<option value="Betances I">Betances I</option>
+<option value="Betances II 9A & Betances III 9A">Betances II 9A & Betances III 9A</option>
+<option value="Betances II 13 & Betances III 13">Betances II 13 & Betances III 13</option>
+<option value="Betances II 18 & Betances III 18">Betances II 18 & Betances III 18</option>
+<option value="Betances IV">Betances IV</option>
+<option value="Betances V">Betances V</option>
+<option value="Betances VI">Betances VI</option>
+<option value="Boston Road Plaza">Boston Road Plaza</option>
+<option value="Boston Secor">Boston Secor</option>
+<option value="Boynton Avenue Rehab">Boynton Avenue Rehab</option>
+<option value="Bronx River & Bronx River Addition">Bronx River & Bronx River Addition</option>
+<option value="Bronxchester">Bronxchester</option>
+<option value="Bryant Avenue-East 174 Street">Bryant Avenue-East 174 Street</option>
+<option value="Butler">Butler</option>
+<option value="Castle Hill">Castle Hill</option>
+<option value="Claremont Parkway-Franklin Ave">Claremont Parkway-Franklin Ave</option>
+<option value="Claremont Rehab (Group 2)">Claremont Rehab (Group 2)</option>
+<option value="Claremont Rehab (Group 3)">Claremont Rehab (Group 3)</option>
+<option value="Claremont Rehab (Group 4)">Claremont Rehab (Group 4)</option>
+<option value="Claremont Rehab (Group 5)">Claremont Rehab (Group 5)</option>
+<option value="Clason Point Gardens">Clason Point Gardens</option>
+<option value="College Ave-East 165th Street">College Ave-East 165th Street</option>
+<option value="Davidson">Davidson</option>
+<option value="Eagle Avenue-East 163rd Street">Eagle Avenue-East 163rd Street</option>
+<option value="East 152nd Street-Courtlandt Avenue">East 152nd Street-Courtlandt Avenue</option>
+<option value="East 165th Street-Bryant Avenue">East 165th Street-Bryant Avenue</option>
+<option value="East 173rd St-Vyse Ave">East 173rd St-Vyse Ave</option>
+<option value="East 180th Street-Monterey Avenue">East 180th Street-Monterey Avenue</option>
+<option value="Eastchester Gardens">Eastchester Gardens</option>
+<option value="Edenwald">Edenwald</option>
+<option value="Forest">Forest</option>
+<option value="Fort Independence St-Heath Ave">Fort Independence St-Heath Ave</option>
+<option value="Franklin Avenue I Conventional">Franklin Avenue I Conventional</option>
+<option value="Franklin Avenue II Conventional">Franklin Avenue II Conventional</option>
+<option value="Franklin Avenue III Conventional">Franklin Avenue III Conventional</option>
+<option value="Glebe Avenue-Westchester Avenue">Glebe Avenue-Westchester Avenue</option>
+<option value="Gun Hill">Gun Hill</option>
+<option value="Harrison Ave Rehab Group A & Group B">Harrison Ave Rehab Group A & Group B</option>
+<option value="Highbridge Gardens">Highbridge Gardens</option>
+<option value="Highbridge Rehabs (Anderson Avenue)">Highbridge Rehabs (Anderson Avenue)</option>
+<option value="Highbridge Rehabs (Nelson Avenue)">Highbridge Rehabs (Nelson Avenue)</option>
+<option value="Hoe Avenue-East 173 Street">Hoe Avenue-East 173 Street</option>
+<option value="Hunts Point Avenue Rehab">Hunts Point Avenue Rehab</option>
+<option value="Jackson">Jackson</option>
+<option value="Longfellow Avenue Rehab">Longfellow Avenue Rehab</option>
+<option value="Marble Hill">Marble Hill</option>
+<option value="McKinley">McKinley</option>
+<option value="Melrose">Melrose</option>
+<option value="Middletown Plaza">Middletown Plaza</option>
+<option value="Mill Brook and Mill Brook Extension">Mill Brook and Mill Brook Extension</option>
+<option value="Mitchel">Mitchel</option>
+<option value="Monroe">Monroe</option>
+<option value="Moore">Moore</option>
+<option value="Morris I">Morris I</option>
+<option value="Morris II">Morris II</option>
+<option value="Morrisania">Morrisania</option>
+<option value="Morrisania Air Rights">Morrisania Air Rights</option>
+<option value="Mott Haven">Mott Haven</option>
+<option value="Murphy">Murphy</option>
+<option value="Parkside">Parkside</option>
+<option value="Patterson">Patterson</option>
+<option value="Pelham Parkway">Pelham Parkway</option>
+<option value="PSS Grandparent">PSS Grandparent</option>
+<option value="Randall-Balcom">Randall-Balcom</option>
+<option value="Sack Wern">Sack Wern</option>
+<option value="Sedgwick">Sedgwick</option>
+<option value="Sotomayor Houses">Sotomayor Houses</option>
+<option value="Soundview">Soundview</option>
+<option value="South Bronx Area site 402">South Bronx Area site 402</option>
+<option value="St Marys Park">St Marys Park</option>
+<option value="Stebbins Ave- Hewitt Pl">Stebbins Ave- Hewitt Pl</option>
+<option value="Teller Ave-East 166 St">Teller Ave-East 166 St</option>
+<option value="Throggs Neck">Throggs Neck</option>
+<option value="Twin Parks East Site 9">Twin Parks East Site 9</option>
+<option value="Twin Parks West Sites 1 & 2">Twin Parks West Sites 1 & 2</option>
+<option value="Union Ave-East 163 St">Union Ave-East 163 St</option>
+<option value="Union Ave-East 166St">Union Ave-East 166St</option>
+<option value="University Avenue">University Avenue</option>
+<option value="Webster">Webster</option>
+<option value="West Farms Road Rehab">West Farms Road Rehab</option>
+<option value="West Farms Road CONV">West Farms Road CONV</option>
+<option value="West Tremont Ave-Sedgwick Ave Area">West Tremont Ave-Sedgwick Ave Area</option>
+</select>
+      </form>
+</br>
+</br>
+    </br>
+   <input type="button" name="pickAgain" value="Reset" onclick="resetBorough();">
+
+
+
+</div>
+
+
+  <div id="brooklyn" class="hidden">
+    <form name="myBrooklynHouse">
+<select name="brooklynHouses" id="brooklynHouses" data-placeholder="e.g. Wyckoff Gardens Houses" tabindex="1" onChange="select_house_brooklyn(); show_where();" >
+  <option value="Which NYCHA development?">Which NYCHA development?</option>
+  <option value="104-14 Tapscott St.">104-14 Tapscott St.</option>
+<option value="303 Vernon Avenue">303 Vernon Avenue</option>
+<option value="572 Warren Street">572 Warren Street</option>
+<option value="Albany and Albany II">Albany and Albany II</option>
+<option value="Armstrong I">Armstrong I</option>
+<option value="Armstrong II">Armstrong II</option>
+<option value="Atlantic Terminal Site 4B">Atlantic Terminal Site 4B</option>
+<option value="Bay View">Bay View</option>
+<option value="Bedford-Stuyvesant Rehab">Bedford-Stuyvesant Rehab</option>
+<option value="Belmont-Sutter Area">Belmont-Sutter Area</option>
+<option value="Berry Street - South 9th Street">Berry Street - South 9th Street</option>
+<option value="Borinquen Plaza I">Borinquen Plaza I</option>
+<option value="Borinquen Plaza II">Borinquen Plaza II</option>
+<option value="Boulevard">Boulevard</option>
+<option value="Breukelen">Breukelen</option>
+<option value="Brevoort">Brevoort</option>
+<option value="Brown">Brown</option>
+<option value="Brownsville">Brownsville</option>
+<option value="Bushwick">Bushwick</option>
+<option value="Bushwick II Groups A & C">Bushwick II Groups A & C</option>
+<option value="Bushwick II Groups B & D">Bushwick II Groups B & D</option>
+<option value="Bushwick II CDA Group E">Bushwick II CDA Group E</option>
+<option value="Carey Gardens">Carey Gardens</option>
+<option value="Coney Island">Coney Island</option>
+<option value="Coney Island Site 8">Coney Island Site 8</option>
+<option value="Coney Island I Site 1B">Coney Island I Site 1B</option>
+<option value="Coney Island I Sites 4 & 5">Coney Island I Sites 4 & 5</option>
+<option value="Cooper Park">Cooper Park</option>
+<option value="Crown Heights">Crown Heights</option>
+<option value="Cypress Hills">Cypress Hills</option>
+<option value="East New York City Line">East New York City Line</option>
+<option value="Farragut">Farragut</option>
+<option value="Fenimore-Lefferts">Fenimore-Lefferts</option>
+<option value="Fiorentino Plaza">Fiorentino Plaza</option>
+<option value="Garvey Group A">Garvey Group A</option>
+<option value="Glenmore Plaza">Glenmore Plaza</option>
+<option value="Glenwood">Glenwood</option>
+<option value="Gowanus">Gowanus</option>
+<option value="Gravesend">Gravesend</option>
+<option value="Haber">Haber</option>
+<option value="Hope Gardens">Hope Gardens</option>
+<option value="Howard">Howard</option>
+<option value="Howard Avenue">Howard Avenue</option>
+<option value="Howard Avenue-Park Place">Howard Avenue-Park Place</option>
+<option value="Hughes Apartments">Hughes Apartments</option>
+<option value="Hylan">Hylan</option>
+<option value="Independence">Independence</option>
+<option value="Ingersoll">Ingersoll</option>
+<option value="Kingsborough-Kingsborough Extension">Kingsborough-Kingsborough Extension</option>
+<option value="Lafayette">Lafayette</option>
+<option value="Lenox Road-Rockaway Parkway">Lenox Road-Rockaway Parkway</option>
+<option value="Linden">Linden</option>
+<option value="Long Island Baptist Houses">Long Island Baptist Houses</option>
+<option value="Low Houses">Low Houses</option>
+<option value="Marcy">Marcy</option>
+<option value="Marcy Ave-Greene AveSite A _Site B">Marcy Ave-Greene AveSite A _Site B</option>
+<option value="Marlboro">Marlboro</option>
+<option value="Nostrand">Nostrand</option>
+<option value="Ocean Hill Apartments">Ocean Hill Apartments</option>
+<option value="Ocean Hill-Brownsville">Ocean Hill-Brownsville</option>
+<option value="O'Dwyer Gardens">O'Dwyer Gardens</option>
+<option value="Palmetto Gardens">Palmetto Gardens</option>
+<option value="Park Rock Rehab">Park Rock Rehab</option>
+<option value="Pennsylvania Ave-Wortman Ave">Pennsylvania Ave-Wortman Ave</option>
+<option value="Pink">Pink</option>
+<option value="Prospect Plaza">Prospect Plaza</option>
+<option value="Ralph Avenue Rehab">Ralph Avenue Rehab</option>
+<option value="Red Hook East">Red Hook East</option>
+<option value="Red Hook West">Red Hook West</option>
+<option value="Reid Apartments">Reid Apartments</option>
+<option value="Roosevelt I&II">Roosevelt I&II</option>
+<option value="Rutland Towers">Rutland Towers</option>
+<option value="Saratoga Square">Saratoga Square</option>
+<option value="Saratoga Village">Saratoga Village</option>
+<option value="Sheepshead Bay">Sheepshead Bay</option>
+<option value="Sterling Place Rehabs-Buffalo">Sterling Place Rehabs-Buffalo</option>
+<option value="Sterling Place Rehabs-SaintJohns">Sterling Place Rehabs-SaintJohns</option>
+<option value="Stuyesant Gardens 1&2">Stuyesant Gardens 1&2</option>
+<option value="Sumner">Sumner</option>
+<option value="Surfside_Gardens">Surfside_Gardens</option>
+<option value="Sutter Avenue-Union Street">Sutter Avenue-Union Street</option>
+<option value="Tapscott Street Rehab">Tapscott Street Rehab</option>
+<option value="Taylor St-Wythe Ave">Taylor St-Wythe Ave</option>
+<option value="Tilden">Tilden</option>
+<option value="Tompkins">Tompkins</option>
+<option value="Unity Plaza 4-27">Unity Plaza 4-27</option>
+<option value="Unity Plaza Sites 17, 24, 25A">Unity Plaza Sites 17, 24, 25A</option>
+<option value="Van Dyke I&II">Van Dyke I&II</option>
+<option value="Vandalia_Avenue">Vandalia_Avenue</option>
+<option value="Weeksville">Weeksville</option>
+<option value="Whitman">Whitman</option>
+<option value="Williams Plaza">Williams Plaza</option>
+<option value="Williamsburg">Williamsburg</option>
+<option value="Woodson">Woodson</option>
+<option value="Wyckoff Gardens">Wyckoff Gardens</option>
+  </select>
+      </form>
+     </br>
+    </br>
+    <input type="submit" name="pickAgain" value="Reset" onclick="resetBorough();">
+  </div>
+
+ <div id="manhattan" class="hidden">
+   <form name="myManhattanHouse">
+<select name="manhattanHouses" id="manhattanHouses" data-placeholder="e.g. Rangel Houses" tabindex="1" onChange="select_house_manhattan(); show_where();" >
+  <option value="Which NYCHA development?">Which NYCHA development?</option>
+  <option value="45 Allen Street">45 Allen Street</option>
+<option value="131 Saint Nicholas Ave">131 Saint Nicholas Ave</option>
+<option value="154 West 84 Street">154 West 84 Street</option>
+<option value="335 East 111 Street">335 East 111 Street</option>
+<option value="344 East 28 Street">344 East 28 Street</option>
+<option value="830 Amsterdam Avenue">830 Amsterdam Avenue</option>
+<option value="Amsterdam & Amsterdam Addition">Amsterdam & Amsterdam Addition</option>
+<option value="Audubon">Audubon</option>
+<option value="Baruch & Baruch Addition">Baruch & Baruch Addition</option>
+<option value="Bethune Gardens">Bethune Gardens</option>
+<option value="Bracetti Plaza">Bracetti Plaza</option>
+<option value="Campos Plaza I & II">Campos Plaza I & II</option>
+<option value="Carver">Carver</option>
+<option value="Chelsea & Chelsea Addition">Chelsea & Chelsea Addition</option>
+<option value="Clinton">Clinton</option>
+<option value="Corsi Houses">Corsi Houses</option>
+<option value="De Hostos Apartments">De Hostos Apartments</option>
+<option value="Douglass Addition">Douglass Addition</option>
+<option value="Douglass I & Douglass II">Douglass I & Douglass II</option>
+<option value="Drew-Hamilton">Drew-Hamilton</option>
+<option value="Dyckman">Dyckman</option>
+<option value="East 4th Street Rehab">East 4th Street Rehab</option>
+<option value="East 120th Street Rehab">East 120th Street Rehab</option>
+<option value="East River">East River</option>
+<option value="Elliott">Elliott</option>
+<option value="First Houses">First Houses</option>
+<option value="Fort Washington Ave Rehab">Fort Washington Ave Rehab</option>
+<option value="Fulton">Fulton</option>
+<option value="Gompers">Gompers</option>
+<option value="Grampion">Grampion</option>
+<option value="Grant">Grant</option>
+<option value="Harborview Terrace">Harborview Terrace</option>
+<option value="Harlem River">Harlem River</option>
+<option value="Harlem River II">Harlem River II</option>
+<option value="Hernandez">Hernandez</option>
+<option value="Holmes Towers">Holmes Towers</option>
+<option value="Isaacs">Isaacs</option>
+<option value="Jefferson">Jefferson</option>
+<option value="Johnson">Johnson</option>
+<option value="King Towers">King Towers</option>
+<option value="La Guardia & La Guardia Addition">La Guardia & La Guardia Addition</option>
+<option value="Lavanburg Homes">Lavanburg Homes</option>
+<option value="Lehman">Lehman</option>
+<option value="Lexington">Lexington</option>
+<option value="Lincoln">Lincoln</option>
+<option value="Lower East Side I Infill">Lower East Side I Infill</option>
+<option value="Lower East Side II">Lower East Side II</option>
+<option value="Lower East Side III">Lower East Side III</option>
+<option value="Lower East Side Rehab Group 5">Lower East Side Rehab Group 5</option>
+<option value="Manhattanville">Manhattanville</option>
+<option value="Manhattanville Rehab Group 2">Manhattanville Rehab Group 2</option>
+<option value="Manhattanville Rehab Group 3">Manhattanville Rehab Group 3</option>
+<option value="Marshall Plaza">Marshall Plaza</option>
+<option value="Meltzer Tower">Meltzer Tower</option>
+<option value="Metro North Plaza">Metro North Plaza</option>
+<option value="Milbank-Frawley">Milbank-Frawley</option>
+<option value="Morris Park Senior Citizens Home">Morris Park Senior Citizens Home</option>
+<option value="Park Ave-East 122, 123 Streets">Park Ave-East 122, 123 Streets</option>
+<option value="Polo Grounds Towers">Polo Grounds Towers</option>
+<option value="Public School 139 (Conversion)">Public School 139 (Conversion)</option>
+<option value="Randolph">Randolph</option>
+<option value="Rangel">Rangel</option>
+<option value="Rehab Program (Douglass Rehabs)">Rehab Program (Douglass Rehabs)</option>
+<option value="Rehab Program (Taft Rehabs)">Rehab Program (Taft Rehabs)</option>
+<option value="Rehab Program (Wise Rehab)">Rehab Program (Wise Rehab)</option>
+<option value="Riis">Riis</option>
+<option value="Riis II">Riis II</option>
+<option value="Robbins Plaza">Robbins Plaza</option>
+<option value="Robinson">Robinson</option>
+<option value="Rutgers">Rutgers</option>
+<option value="Saint Nicholas">Saint Nicholas</option>
+<option value="Samuel (City)">Samuel (City)</option>
+<option value="Samuel (MHOP) I">Samuel (MHOP) I</option>
+<option value="Samuel (MHOP) II">Samuel (MHOP) II</option>
+<option value="Samuel (MHOP) III">Samuel (MHOP) III</option>
+<option value="Seward Park Extension">Seward Park Extension</option>
+<option value="Smith">Smith</option>
+<option value="Stanton Street">Stanton Street</option>
+<option value="Straus">Straus</option>
+<option value="Taft">Taft</option>
+<option value="Thomas Apartments">Thomas Apartments</option>
+<option value="Two Bridges URA Site 7">Two Bridges URA Site 7</option>
+<option value="UPACA (Site 5) & UPACA (Site 6)">UPACA (Site 5) & UPACA (Site 6)</option>
+<option value="Vladeck">Vladeck</option>
+<option value="Vladeck II">Vladeck II</option>
+<option value="Wagner">Wagner</option>
+<option value="Wald">Wald</option>
+<option value="Washington">Washington</option>
+<option value="Washington Heights Rehab Groups 1 & 2">Washington Heights Rehab Groups 1 & 2</option>
+<option value="Washington Heights Rehab Phase III TDS#329">Washington Heights Rehab Phase III TDS#329</option>
+<option value="Washington Heights Rehab Phase III TDS#523">Washington Heights Rehab Phase III TDS#523</option>
+<option value="Washington Heights Rehab Phase IV C">Washington Heights Rehab Phase IV C</option>
+<option value="Washington Heights Rehab Phase IV D">Washington Heights Rehab Phase IV D</option>
+<option value="White">White</option>
+<option value="Wilson">Wilson</option>
+<option value="Wise Towers">Wise Towers</option>
+<option value="WSUR (Brownstones)">WSUR (Brownstones)</option>
+<option value="WSUR (Site A) 120 W 94 Street">WSUR (Site A) 120 W 94 Street</option>
+<option value="WSUR (Site B) 74 W 92 Street">WSUR (Site B) 74 W 92 Street</option>
+<option value="WSUR (Site C) 589 Amsterdam Avenue">WSUR (Site C) 589 Amsterdam Avenue</option>
+    </select>
+      </form>
+    </br>
+    </br>
+    <input type="submit" name="pickAgain" value="Reset" onclick="resetBorough();">
+  </div>
+
+ <div id="queens" class="hidden">
+   <form name="myQueensHouse">
+<select name="queensHouses" id="queensHouses" data-placeholder="e.g. Pomonok Houses" tabindex="1" onChange="select_house_queens(); show_where();" >
+  <option value="Which NYCHA development?">Which NYCHA development?</option>
+  <option value="Astoria">Astoria</option>
+<option value="Baisley Park">Baisley Park</option>
+<option value="Beach 41st Street-Beach Channel Drive">Beach 41st Street-Beach Channel Drive</option>
+<option value="Bland">Bland</option>
+<option value="Carleton Manor">Carleton Manor</option>
+<option value="Conlon Lihfe Tower">Conlon Lihfe Tower</option>
+<option value="Forest Hills">Forest Hills</option>
+<option value="Hammel">Hammel</option>
+<option value="International Tower">International Tower</option>
+<option value="Latimer Gardens">Latimer Gardens</option>
+<option value="Leavitt Street-34th Ave">Leavitt Street-34th Ave</option>
+<option value="Ocean Bay Apartments (Bayside)">Ocean Bay Apartments (Bayside)</option>
+<option value="Ocean Bay Apartments (Oceanside)">Ocean Bay Apartments (Oceanside)</option>
+<option value="Pomonok">Pomonok</option>
+<option value="Queensbridge North">Queensbridge North</option>
+<option value="Queensbridge South">Queensbridge South</option>
+<option value="Ravenswood">Ravenswood</option>
+<option value="Redfern">Redfern</option>
+<option value="Rehab Program (College Point)">Rehab Program (College Point)</option>
+<option value="Shelton House">Shelton House</option>
+<option value="South Jamaica I">South Jamaica I</option>
+<option value="South Jamaica II">South Jamaica II</option>
+<option value="Woodside">Woodside</option>
+    </select>
+      </form>
+    </br>
+    </br>
+    <input type="submit" name="pickAgain" value="Reset" onclick="resetBorough();">
+  </div>
+
+ <div id="statenIsland" class="hidden">
+     <form name="myStatenIslandHouse">
+<select name="statenIslandHouses" id="statenIslandHouses" data-placeholder="e.g. South Beach Houses" tabindex="1" onChange="select_house_statenIsland(); show_where();" >
+  <option value="Which NYCHA development?">Which NYCHA development?</option>
+  <option value="Berry">Berry</option>
+<option value="Cassidy-Lafayette">Cassidy-Lafayette</option>
+<option value="Mariners Harbor">Mariners Harbor</option>
+<option value="New Lane Area">New Lane Area</option>
+<option value="Richmond Terrace">Richmond Terrace</option>
+<option value="South Beach">South Beach</option>
+<option value="Stapleton">Stapleton</option>
+<option value="Todt Hill">Todt Hill</option>
+<option value="West Brighton I & II">West Brighton I & II</option>
+    </select>
+      </form>
+    </br>
+    </br>
+    <input type="submit" name="pickAgain" value="Reset" onclick="resetBorough();">
+  </div>
+
+  <div id="where" class="hidden">
+  <h4>Select <strong>all </strong> the rooms that have mold: </h4>
+                </p>
+
+                <form name="where_mold" onsubmit="return validate(this);">
+                    <input type="checkbox" id="selected_kitchen" value="Kitchen" name="mold"> Kitchen
+                    </br>
+                    <input type="checkbox" id="selected_masterbedroom" value="Master bedroom" name="mold"> Master bedroom
+                    </br>
+                    <input type="checkbox" id="selected_bedroom" value="Child's bedroom" name="mold"> Child's bedroom
+                    </br>
+                    <input type="checkbox" id="selected_Bathroom" value="Bathroom" name="mold"> Bathroom
+                    </br>
+                    </br>
+                    <input type="submit" value="Which room(s)">
+                    <input type="reset" value="Reset">
+                </form>
+
+                <br>
+        </div>
+        <div id="contactInfo" class="hidden">
+            <label id="yourName">Your Name</label>
+            <form name="myName">
+                <input type="text" id="myName" value="" size="30%" placeholder="Name on the lease">
+                <br>
+                <br>
+                <input type="button" value="Write Letter" onclick="get_name();">
+            </form>
+            </br>
+        </div>
+
+
+        <div id="letter" class="hidden"></div>
+        </section>
+        </div>
+        </div>
+        <script src="main.js"></script>
+
+    </body>
+
+</html>
