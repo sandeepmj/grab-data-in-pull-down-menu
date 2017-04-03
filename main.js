@@ -1,3 +1,21 @@
+$(document).ready(function () { // we must wait for the DOM to be ready as the browser can take a little while to read all of the HTML and build the elements
+
+	$("#borough").change(function () {
+		$("select option:selected").each(function () {
+			var myCity = $(this),
+				feeling = myCity.data('feelings');
+			console.log("How I feel about that place: ", feeling);
+		});
+
+	}); // closes click related functions or events
+
+
+}); // closes document ready
+
+
+
+
+
 function select_borough() {
 	var w = document.myBorough.borough.selectedIndex;
 	//the next variable "selected_borough" does not start with var, it is a global variable and works outside this function.
@@ -12,21 +30,21 @@ function select_borough() {
 
 };
 
-function resetBorough() {
-	$("#" + selected_borough).hide('slowly');
-	$("#borough").prop("disabled", false);
-	$('select option:first-child').attr('selected', 'selected');
-	$("#where").hide('slowly');
-
-}
-
-
-function select_house() {
-	//alert("i Live in the bronx!")
-	var b = document.myBronxHouse.bronxHouses.selectedIndex;
-	selected_house = document.myBronxHouse.bronxHouses.options[b].value;
-	// alert(selected_house);
-};
+// function resetBorough() {
+// 	$("#" + selected_borough).hide('slowly');
+// 	$("#borough").prop("disabled", false);
+// 	$('select option:first-child').attr('selected', 'selected');
+// 	$("#where").hide('slowly');
+//
+// }
+//
+//
+// function select_house() {
+// 	//alert("i Live in the bronx!")
+// 	var b = document.myBronxHouse.bronxHouses.selectedIndex;
+// 	selected_house = document.myBronxHouse.bronxHouses.options[b].value;
+// 	// alert(selected_house);
+// };
 
 function select_house_brooklyn() {
 	//alert("i Live in the bronx!")

@@ -8,10 +8,8 @@ Copyright (c) 2015 Sandeep Junnarkar
     <head>
         <title>Form to email</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-        </script>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
     </head>
 
     <body>
@@ -26,12 +24,12 @@ Copyright (c) 2015 Sandeep Junnarkar
                 <h4>Where do you live in New York City?</h4 id="whichBorough">
 <form name="myBorough">
   <select name="borough" id="borough" onChange="select_borough()">
-  <option value="which">Select Borough</option>
-  <option value="theBronx">The Bronx</option>
-  <option value="brooklyn">Brooklyn</option>
-  <option value="manhattan">Manhattan</option>
-  <option value="queens">Queens</option>
-  <option value="statenIsland">Staten Island</option>
+  <option selected value="which">Select Borough</option>
+  <option value="theBronx" data-feelings="The Bronx- My wife went to school there!">The Bronx</option>
+  <option value="brooklyn" data-feelings="Brooklyn- Wishful thinking about living here...">Brooklyn</option>
+  <option value="manhattan"  data-feelings="Manhattan- Where I lived while in grad school">Manhattan</option>
+  <option value="queens"  data-feelings="Queens- Where i live now">Queens</option>
+  <option value="statenIsland" data-feelings="Staten Island- Avoid at all cost.">Staten Island</option>
 </select>
 </form>
   </br>
@@ -447,7 +445,10 @@ Copyright (c) 2015 Sandeep Junnarkar
         <div id="letter" class="hidden"></div>
         </section>
         </div>
+
+
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="main.js"></script>
 
     </body>
